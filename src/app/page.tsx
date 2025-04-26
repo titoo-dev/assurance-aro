@@ -68,8 +68,33 @@ export default function Home() {
 						</div>
 
 						<div className="relative flex justify-center items-center">
+							{/* Enhanced background pulse effect */}
 							<div className="absolute -inset-10 bg-primary-foreground/5 rounded-full blur-3xl animate-pulse"></div>
+							<div className="absolute -inset-16 bg-primary-foreground/10 rounded-full blur-2xl animate-pulse animation-delay-700"></div>
+
+							{/* Outer ring with pulse animation */}
+							<div className="absolute inset-0 rounded-full border-4 border-primary-foreground/20 animate-ping opacity-20"></div>
+
+							{/* Main image container */}
 							<div className="relative w-full max-w-md aspect-square bg-gradient-to-br from-primary-foreground/20 to-primary-foreground/5 backdrop-blur-sm rounded-full p-6 flex items-center justify-center overflow-hidden animate-float-slow border border-primary-foreground/20 shadow-lg shadow-primary-foreground/5">
+								{/* Subtle rotating glow effect */}
+								<div className="absolute inset-0 bg-gradient-to-tr from-primary-foreground/30 to-transparent opacity-70 animate-spin-slow"></div>
+
+								{/* Small orbiting dots */}
+								{Array.from({ length: 5 }).map((_, i) => (
+									<span
+										key={i}
+										className="absolute w-2 h-2 bg-primary-foreground/80 rounded-full animate-orbit blur-sm"
+										style={{
+											animationDelay: `${i * 0.7}s`,
+											animationDuration: `${
+												6 + i * 0.5
+											}s`,
+										}}
+									/>
+								))}
+
+								{/* Image container with reflection */}
 								<div className="relative w-full h-full rounded-full overflow-hidden">
 									<div className="absolute inset-0 bg-gradient-to-tr from-primary-foreground/10 to-transparent rotate-45"></div>
 									<Image
@@ -81,6 +106,10 @@ export default function Home() {
 									/>
 								</div>
 							</div>
+
+							{/* Decorative highlight dots */}
+							<div className="absolute top-1/4 right-1/4 w-3 h-3 bg-primary-foreground/80 rounded-full blur-sm animate-pulse"></div>
+							<div className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-primary-foreground/60 rounded-full blur-sm animate-pulse animation-delay-500"></div>
 						</div>
 					</div>
 				</div>
