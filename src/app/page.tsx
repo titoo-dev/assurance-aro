@@ -41,7 +41,7 @@ export default function Home() {
 							<div className="relative">
 								<div className="absolute -inset-1 bg-gradient-to-r from-primary-foreground/20 to-primary-foreground/5 rounded-lg blur opacity-30"></div>
 								<div className="relative">
-									<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 animate-fade-right">
+									<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 animate-fade-right text-primary-foreground">
 										Assurances ARO
 									</h1>
 									<p className="text-xl text-primary-foreground/90 animate-fade-right animation-delay-300">
@@ -60,7 +60,7 @@ export default function Home() {
 								<Button
 									size="lg"
 									variant="outline"
-									className="border-primary-foreground text-primary-foreground bg-primary-foreground/10 transition-colors hover:bg-primary-foreground/20"
+									className="border-primary-foreground text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
 								>
 									Professionnels et Entreprises
 								</Button>
@@ -76,7 +76,7 @@ export default function Home() {
 							<div className="absolute inset-0 rounded-full border-4 border-primary-foreground/20 animate-ping opacity-20"></div>
 
 							{/* Main image container */}
-							<div className="relative w-full max-w-md aspect-square bg-gradient-to-br from-primary-foreground/20 to-primary-foreground/5 backdrop-blur-sm rounded-full p-6 flex items-center justify-center overflow-hidden animate-float-slow border border-primary-foreground/20 shadow-lg shadow-primary-foreground/5">
+							<div className="relative w-full max-w-md aspect-square bg-gradient-to-br from-primary-foreground/20 to-primary-foreground/5 backdrop-blur-sm rounded-full p-6 flex items-center justify-center overflow-hidden animate-float-slow border border-primary-foreground/20 shadow-lg shadow-primary/5">
 								{/* Subtle rotating glow effect */}
 								<div className="absolute inset-0 bg-gradient-to-tr from-primary-foreground/30 to-transparent opacity-70 animate-spin-slow"></div>
 
