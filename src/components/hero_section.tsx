@@ -104,21 +104,6 @@ const HeroSection = () => {
 				</div>
 			</div>
 
-			{/* Wave effect at bottom */}
-			<div className="absolute bottom-0 left-0 right-0 h-40 overflow-hidden">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 1440 320"
-					className="absolute bottom-0 w-full h-auto"
-				>
-					<path
-						fill="oklch(0.98 0.015 97)"
-						fillOpacity="1"
-						d="M0,192L48,197.3C96,203,192,213,288,208C384,203,480,181,576,181.3C672,181,768,203,864,208C960,213,1056,203,1152,170.7C1248,139,1344,85,1392,58.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-					></path>
-				</svg>
-			</div>
-
 			{/* Floating dots grid */}
 			<div className="absolute inset-0 grid grid-cols-12 gap-4 pointer-events-none opacity-[0.15]">
 				{Array.from({ length: 12 * 8 }).map((_, i) => (
