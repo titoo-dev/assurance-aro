@@ -57,7 +57,7 @@ const ActualityCard = ({ item }: { item: ActualityItem }) => {
 	const { title, description, image, date, icon: Icon, alt } = item;
 
 	return (
-		<Card className="group overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+		<Card className="group overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full pt-0">
 			<div className="relative h-52 w-full overflow-hidden">
 				<Image
 					src={image}
