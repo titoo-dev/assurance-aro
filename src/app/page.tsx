@@ -7,18 +7,14 @@ import { MobileVersionSection } from '@/components/mobile_version_section';
 export default function Home() {
 	return (
 		<div className="flex flex-col min-h-screen">
-			{/* Hero Section */}
 			<HeroSection />
 
-			{/* Services Section */}
 			<ServiceSection />
 
-			{/* Download app from store section */}
 			<MobileVersionSection />
 
 			<ActualitySection />
 
-			{/* Contact Section */}
 			<ContactSection />
 		</div>
 	);

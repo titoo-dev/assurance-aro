@@ -249,13 +249,6 @@ export const ServiceSection = () => {
 						/>
 					))}
 				</div>
-
-				<div className="mt-16 text-center">
-					<Button variant="default" size="lg" className="px-8">
-						Tous nos services d&apos;assurance
-						<ChevronRight className="ml-2 h-5 w-5" />
-					</Button>
-				</div>
 			</div>
 		</section>
 	);
