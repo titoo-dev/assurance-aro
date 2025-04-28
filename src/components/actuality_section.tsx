@@ -115,7 +115,7 @@ export const ActualitySection = () => {
 					</h2>
 					<p className="text-muted-foreground max-w-2xl mx-auto">
 						Découvrez les dernières nouvelles et événements
-						d'Assurances ARO
+						d&aposAssurances ARO
 					</p>
 				</div>
 
