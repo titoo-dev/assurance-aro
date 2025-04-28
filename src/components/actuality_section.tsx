@@ -6,7 +6,7 @@ import {
 	CardContent,
 	CardFooter,
 } from '@/components/ui/card';
-import { Calendar, Award, Handshake } from 'lucide-react';
+import { Calendar, Award, Handshake, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
 // Data model
@@ -84,20 +84,7 @@ const ActualityCard = ({ item }: { item: ActualityItem }) => {
 					className="w-full group-hover:bg-primary group-hover:text-white transition-colors flex items-center justify-center gap-2"
 				>
 					Voir Plus
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="16"
-						height="16"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						strokeWidth="2"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						className="h-4 w-4"
-					>
-						<path d="m9 18 6-6-6-6" />
-					</svg>
+					<ChevronRight className="h-4 w-4" />
 				</Button>
 			</CardFooter>
 		</Card>
