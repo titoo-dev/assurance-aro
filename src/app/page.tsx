@@ -1,8 +1,3 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, MapPin, Mail, ChevronRight, MessageSquare } from 'lucide-react';
 import { ServiceSection } from '@/components/service_section';
 import HeroSection from '@/components/hero_section';
 import { ActualitySection } from '@/components/actuality_section';
