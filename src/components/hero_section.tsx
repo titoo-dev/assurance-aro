@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './ui/button';
 import Image from 'next/image';
+import { HeroButton } from './hero_button';
 
 const HeroSection = () => {
 	return (
@@ -45,21 +46,8 @@ const HeroSection = () => {
 								</p>
 							</div>
 						</div>
-						<div className="flex flex-col sm:flex-row gap-4 animate-fade-up animation-delay-500">
-							<Button
-								size="lg"
-								variant="default"
-								className="font-medium bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-colors"
-							>
-								Particuliers
-							</Button>
-							<Button
-								size="lg"
-								variant="outline"
-								className="border-primary-foreground text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
-							>
-								Professionnels et Entreprises
-							</Button>
+						<div className="animate-fade-up animation-delay-500 mt-8">
+							<HeroButton />
 						</div>
 					</div>
 
@@ -72,32 +60,41 @@ const HeroSection = () => {
 						<div className="absolute inset-0 rounded-full border-4 border-primary-foreground/20 animate-ping opacity-20"></div>
 
 						{/* Main image container */}
-						<div className="relative w-full max-w-md aspect-square bg-gradient-to-br from-primary-foreground/20 to-primary-foreground/5 backdrop-blur-sm rounded-full p-6 flex items-center justify-center overflow-hidden animate-float-slow border border-primary-foreground/20 shadow-lg shadow-primary/5">
-							{/* Subtle rotating glow effect */}
-							<div className="absolute inset-0 bg-gradient-to-tr from-primary-foreground/30 to-transparent opacity-70 animate-spin-slow"></div>
+						<div className="relative w-full max-w-2xl aspect-video bg-gradient-to-br from-primary-foreground/20 to-primary-foreground/5 backdrop-blur-sm rounded-2xl p-4 flex items-center justify-center overflow-hidden animate-float-slow border border-primary-foreground/20 shadow-xl shadow-primary/5">
+							{/* Subtle animated glow effect */}
+							<div className="absolute inset-0 bg-gradient-to-tr from-primary-foreground/30 to-transparent opacity-70 animate-pulse-slow"></div>
 
-							{/* Small orbiting dots */}
-							{Array.from({ length: 5 }).map((_, i) => (
+							{/* Decorative corner highlights */}
+							<div className="absolute top-0 left-0 w-28 h-28 bg-primary-foreground/10 rounded-br-3xl"></div>
+							<div className="absolute bottom-0 right-0 w-28 h-28 bg-primary-foreground/10 rounded-tl-3xl"></div>
+
+							{/* Floating elements */}
+							{Array.from({ length: 4 }).map((_, i) => (
 								<span
 									key={i}
-									className="absolute w-2 h-2 bg-primary-foreground/80 rounded-full animate-orbit blur-sm"
+									className="absolute w-4 h-4 bg-primary-foreground/80 rounded-sm animate-float blur-sm"
 									style={{
-										animationDelay: `${i * 0.7}s`,
-										animationDuration: `${6 + i * 0.5}s`,
+										top: `${20 + i * 15}%`,
+										left: `${15 + i * 20}%`,
+										animationDelay: `${i * 0.8}s`,
+										animationDuration: `${4 + i}s`,
+										transform: `rotate(${45 * i}deg)`,
 									}}
 								/>
 							))}
 
-							{/* Image container with reflection */}
-							<div className="relative w-full h-full rounded-full overflow-hidden">
+							{/* Image container with stylized frame - increased from 92% to 96% */}
+							<div className="relative w-[96%] h-[96%] rounded-xl overflow-hidden border border-primary-foreground/20">
 								<div className="absolute inset-0 bg-gradient-to-tr from-primary-foreground/10 to-transparent rotate-45"></div>
 								<Image
-									src="/hero_banner.jpg"
+									src="/hero_image.jpg"
 									alt="ARO Assurances Logo"
 									fill
-									className="object-cover rounded-full"
+									className="object-cover rounded-xl"
 									priority
 								/>
+								{/* Subtle overlay to enhance image */}
+								<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/30"></div>
 							</div>
 						</div>
 

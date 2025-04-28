@@ -221,10 +221,17 @@ const ServiceCard = ({
 
 export const ServiceSection = () => {
 	return (
-		<section className="py-24 bg-gradient-to-b from-white to-slate-50">
+		<section
+			id="services"
+			className="py-24 bg-gradient-to-b from-white to-slate-50"
+			aria-labelledby="services-heading"
+		>
 			<div className="container px-4 mx-auto max-w-7xl">
 				<div className="text-center mb-16">
-					<h2 className="text-3xl font-b</Card>old tracking-tight mb-4">
+					<h2
+						id="services-heading"
+						className="text-3xl font-bold tracking-tight mb-4"
+					>
 						Nos Services d&apos;Assurance
 					</h2>
 					<p className="text-muted-foreground max-w-2xl mx-auto">
