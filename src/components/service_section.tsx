@@ -3,14 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
 
-// Define the service data structure
 type Service = {
 	title: string;
 	description: string;
 	icon: React.ReactNode;
 };
 
-// Services data array
 const services: Service[] = [
 	{
 		title: 'Assurance Automobile',
@@ -153,7 +151,6 @@ const services: Service[] = [
 	},
 ];
 
-// Service card component
 const ServiceCard = ({
 	service,
 	index,
@@ -161,7 +158,6 @@ const ServiceCard = ({
 	service: Service;
 	index: number;
 }) => {
-	// Define an array of gradient and color combinations
 	const styles = [
 		{
 			gradient: 'from-blue-50 to-slate-50',
@@ -183,7 +179,6 @@ const ServiceCard = ({
 		},
 	];
 
-	// Get style based on index modulo 3 to cycle through styles
 	const style = styles[index % 3];
 
 	return (
