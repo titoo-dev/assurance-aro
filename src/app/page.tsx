@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Phone, MapPin, Mail, ChevronRight, MessageSquare } from 'lucide-react';
 import { ServiceSection } from '@/components/service_section';
 import HeroSection from '@/components/hero_section';
+import { ActualitySection } from '@/components/actuality_section';
 
 export default function Home() {
 	return (
@@ -167,6 +168,8 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+
+			<ActualitySection />
 
 			{/* Contact Section */}
 			<section className="py-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
